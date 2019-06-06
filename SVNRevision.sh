@@ -12,6 +12,6 @@ DIRS=`ls -l $MYDIR | egrep '^d' | awk '{print $9}'`
 for DIR in $DIRS
 do
 REV=`svn info $DIR --show-item revision`
-echo  ${DIR} $REV
+echo  $DIR $REV 
 done
 
