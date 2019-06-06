@@ -1,8 +1,8 @@
 #!/bin/bash
 
-$MYDIR="/var/log"
+MYDIR="/"
 
-DIRS=`ls -l $MYDIR | egrep '^d' | awk '{print $8}'`
+DIRS=`ls -l $MYDIR | egrep '^d' | awk '{print $9}'`
 
 # "ls -l $MYDIR"      = get a directory listing
 # "| egrep '^d'"           = pipe to egrep and select only the directories
