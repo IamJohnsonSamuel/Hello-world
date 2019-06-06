@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/usr/sh
 
 MYDIR=$PWD
 
@@ -11,6 +11,7 @@ DIRS=`ls -l $MYDIR | egrep '^d' | awk '{print $9}'`
 # and now loop through the directories:
 for DIR in $DIRS
 do
-echo  ${DIR}
+REV=`svn info $DIR --show-item revision`
+echo  ${DIR} $REV
 done
 
