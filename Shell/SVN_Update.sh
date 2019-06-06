@@ -18,5 +18,5 @@ while read line; do
   echo "$line"
   COMPONENT="$(echo $line | cut -d ' ' -f1 )"
   REVISION="$(echo $line | cut -d ' ' -f2 )"
-  svn update -r $REVISION $COMPONENT
+  svn update -r $REVISION $COMPONENT --username $username --password $password
 done<$filename
